@@ -1,12 +1,862 @@
- <!DOCTYPE html>
-<HTML>
-  <head>
-    <title>Mi primer WEB</title>
-  </head>
-  <body>
-    <div id="una capa">
-      <h1>Hola mundo!</h1>
-      <p>Este es un ejemplo del uso de HTML para crear un documento web que nuestro navegador es capaz de interpretar.</p>
-    </div>
-  </body>  
-</HTML>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xml:lang="es-ES" lang="es-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head">
+<!--*********************************************-->
+<!-- DNN Platform - http://www.dnnsoftware.com   -->
+<!-- Copyright (c) 2002-2015, by DNN Corporation -->
+<!--*********************************************-->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta name="REVISIT-AFTER" content="1 DAYS" />
+<meta name="RATING" content="GENERAL" />
+<meta name="RESOURCE-TYPE" content="DOCUMENT" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<title>
+	Universidad Técnica de Cotopaxi > Home
+</title><meta id="MetaDescription" name="DESCRIPTION" content="Universidad Técnica de Cotopaxi" /><meta id="MetaKeywords" name="KEYWORDS" content="UTC, utc,DotNetNuke,DNN" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><link href="/Portals/_default/default.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/DesktopModules/Dnnskin.Net.MGS/module.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Resources/Search/SearchSkinObjectPreview.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/Skins/Award/skin.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/Containers/Award/container.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/Award-Red/container.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/Containers/Award/SilverHead.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/Skins/Award//DNNStandard/StandardMenu.css?cdv=234" media="all" type="text/css" rel="stylesheet"/><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?cdv=234" type="text/javascript"></script><script src="//code.jquery.com/jquery-migrate-1.2.1.min.js?cdv=234" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js?cdv=234" type="text/javascript"></script><script type="text/javascript">
+	if (typeof jQuery == 'undefined') {document.write('<script src="/Resources/libraries/jQuery/01_09_01/jquery.js" type="text/javascript"></' + 'script>');}
+</script><link id="MGSHeaderCss657" rel="stylesheet" type="text/css" href="/DesktopModules/Dnnskin.Net.MGS/css/moduleheader657.css?1282817"></link><link id="MGSmodule657" rel="stylesheet" type="text/css" href="/DesktopModules/Dnnskin.Net.MGS/css/module657.css?1282817"></link><link id="MGScss657" rel="stylesheet" type="text/css" href="/DesktopModules/Dnnskin.Net.MGS/Templates/Award/template.css"></link><link rel='SHORTCUT ICON' href='/Portals/0/BELEN/NUEVAimagen/utc.ico?ver=2019-05-08-100359-913' type='image/x-icon' /></head>
+<body id="Body">
+    
+    <form method="post" action="/" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/4.6/1/WebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.WebForm_PostBackOptions||document.write('<script type="text/javascript" src="/WebResource.axd?d=_MIKLrHktWwef02uqioogB5wOAkqb37ypHIkQMofm1Bz5s4DoWjvsRk8DIKw5j0rwv8V-XxPObmxLek00&amp;t=637814473746327080"><\/script>');//]]>
+</script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"es-ES","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"€","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135578800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy H:mm:ss","LongDatePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"H:mm:ss","MonthDayPattern":"d\u0027 de \u0027MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["do.","lu.","ma.","mi.","ju.","vi.","sá."],"ShortestDayNames":["D","L","M","X","J","V","S"],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":false,"NativeCalendarName":"calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]},"eras":[1,"d. C.",null,0]};//]]>
+</script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjax.es.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=3YBcphWXycNIuBcX5fr51lgFn9YVWW0U4THRUXnKWsgkZPK2gswPQztpe3KdaKuwTf5hzSaXKgJJ4AkPTkQAK2GmJcMq3sulUTq73drq6c1I18N7xEavtzRtQFaT1eoKqOA0Gofd7zQD05IkX8to4qnZNYQ1&t=49337fe8"><\/script>');//]]>
+</script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjaxWebForms.es.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys.WebForms)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=2ilLpmnr8GP_ZEz27YsgMJVx7tSSWQlNO5hi691qFZ83K-sjqCp2kiWKYpCJCcPIP8dq8ja1clRklHtUYjN4iwC2GuR-bNIHeYwFsYL_WNiNlVHoWsEaKAbQBoJc40V_vWUMHIClCroP7YEKh9XPeGwaEqd5wzGUuaYHug2&t=49337fe8"><\/script>');//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Rvby71AGUMageGtqfeS7XePh7z6zBeT33C1JLgAmD1P1JVJKJx610QOwzag7WyaehAnqy1Dk9pKpgP75lDeLkRN5uoF24mX9J6BkXGAYvoGUVNNMRvGBogYiAHaDO2FHTHebDBsNuS0ChNBMvEcyHhMf4JBMFr7gIhgR1VBnMSfEFNJlUCFlT7B0UkvCcKg7VYQ7Wii4LtDaeWlmibM5OwNACQGONsBSW1Evqg==" />
+</div><script src="/js/dnn.js?cdv=234" type="text/javascript"></script><script src="/js/dnn.modalpopup.js?cdv=234" type="text/javascript"></script><script src="/js/dnn.servicesframework.js?cdv=234" type="text/javascript"></script><script src="/Resources/Search/SearchSkinObjectPreview.js?cdv=234" type="text/javascript"></script><script src="/js/dnncore.js?cdv=234" type="text/javascript"></script><script src="/Portals/0/Skins/Award//DNNStandard/StandardMenu.js?cdv=234" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 100, '');
+//]]>
+</script>
+
+        
+        
+        
+<!--[if lt IE 9]> 
+	<script src="/Portals/0/Skins/Award/js/css3-mediaqueries.js"></script> 
+	<style type="text/css">.radius4, #dnnmenu, .shadow1{behavior:url(/Portals/0/Skins/Award/js/pie.htc)}#fadedTestimonial ul li .author{margin-top:-2px}</style>
+<![endif]--> 	
+<script type="text/javascript" src="/Portals/0/Skins/Award/js/jquery.scrollTo-1.4.0-min.js"></script>
+<script type="text/javascript" language="javascript">
+	<!--
+	$(document).ready(function() {
+		$('head').append('<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0"/>');
+	});
+	//for search value:
+	$(document).ready(
+	function(){
+	var s="Search...";
+	$("#dnn_dnnSEARCH_txtSearch").val(s).click(function(){
+	var ss=$(this).val();if(ss==s)$(this).val("") })
+	.blur(function(){
+	var ss=$(this).val();if(ss=="")$(this).val(s) });});
+
+	//Back top:
+	jQuery.fn.topLink = function(settings) {
+		settings = jQuery.extend({
+			min: 1,
+			fadeSpeed: 200,
+			ieOffset: 50
+		}, settings);
+		return this.each(function() {
+			//listen for scroll
+			var el = $(this);
+			el.css('display','none'); //in case the user forgot
+			$(window).scroll(function() {
+				if(!jQuery.support.hrefNormalized) {
+					el.css({
+						'position': 'absolute',
+						'top': $(window).scrollTop() + $(window).height() - settings.ieOffset
+					});
+				}
+				if($(window).scrollTop() >= settings.min)
+				{
+					el.fadeIn(settings.fadeSpeed);
+				}
+				else
+				{
+					el.fadeOut(settings.fadeSpeed);
+				}
+			});
+		});
+	};
+	
+	$(document).ready(function() {
+		$('#top-link').topLink({
+			min: 400,
+			fadeSpeed: 500
+		});
+		//smoothscroll
+		$('#top-link').click(function(e) {
+			e.preventDefault();
+			$.scrollTo(0,300);
+		});
+	});
+-->	
+	</script>
+
+<div id="DNN6">
+	<div class="row">
+		<div class="topbar">
+			<div class="fright" id="Login">
+				
+ 
+				
+<div id="dnn_dnnLogin_loginGroup" class="loginGroup">
+    <a id="dnn_dnnLogin_enhancedLoginLink" title="Iniciar" class="LoginLink" rel="nofollow" onclick="return dnnModal.show(&#39;http://www.utc.edu.ec/Login?returnurl=/&amp;popUp=true&#39;,/*showReturn*/true,300,650,true,&#39;&#39;)" href="http://www.utc.edu.ec/Login?returnurl=%2f">Iniciar</a>
+</div>
+				<div class="language-object" >
+
+
+</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<div id="dnnheader">
+			<div class="fleft logo">
+				<a id="dnn_dnnLogo_hypLogo" title="Universidad Técnica de Cotopaxi" href="http://www.utc.edu.ec/"><img id="dnn_dnnLogo_imgLogo" src="/Portals/0/BELEN/NUEVAimagen/universidad_def.png?ver=2019-05-08-101730-527" alt="Universidad Técnica de Cotopaxi" /></a>
+				<img src="http://www.utc.edu.ec/images/liston.png" />
+			</div>
+			
+			<div class="fright">
+				<br />
+				<div class="searchbox radius4">
+					<span id="dnn_dnnSEARCH_ClassicSearch">
+    
+    
+    <span class="searchInputContainer" data-moreresults="Ver más resultados" data-noresult="No se han encontrado resultados">
+        <input name="dnn$dnnSEARCH$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSEARCH_txtSearch" class="NormalTextBox" autocomplete="off" placeholder="Buscar..." />
+        <a class="dnnSearchBoxClearText"></a>
+    </span>
+    <a id="dnn_dnnSEARCH_cmdSearch" class="SkinObject" href="javascript:__doPostBack(&#39;dnn$dnnSEARCH$cmdSearch&#39;,&#39;&#39;)"><span></span></a>
+</span>
+
+
+<script type="text/javascript">
+    $(function() {
+        if (typeof dnn != "undefined" && typeof dnn.searchSkinObject != "undefined") {
+            var searchSkinObject = new dnn.searchSkinObject({
+                delayTriggerAutoSearch : 400,
+                minCharRequiredTriggerAutoSearch : 2,
+                searchType: 'S',
+                enableWildSearch: true,
+                cultureCode: 'es-ES',
+                portalId: -1
+                }
+            );
+            searchSkinObject.init();
+            
+            
+            // attach classic search
+            var siteBtn = $('#dnn_dnnSEARCH_SiteRadioButton');
+            var webBtn = $('#dnn_dnnSEARCH_WebRadioButton');
+            var clickHandler = function() {
+                if (siteBtn.is(':checked')) searchSkinObject.settings.searchType = 'S';
+                else searchSkinObject.settings.searchType = 'W';
+            };
+            siteBtn.on('change', clickHandler);
+            webBtn.on('change', clickHandler);
+            
+            
+        }
+    });
+</script>
+
+				</div>
+				<div id="dnn_HeadPane" class="fright Headpane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-658"><a name="658"></a>
+<div class="c_H1">
+    <h1 class="cheader"><span id="dnn_ctr658_dnnTITLE_titleLabel" class="title"> </span>
+
+
+</h1>
+<div id="dnn_ctr658_ContentPane" class="DNNAlignleft"><!-- Start_Module_658 --><div id="dnn_ctr658_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr658_HtmlModule_lblContent" class="Normal normalCheckBox">
+	<div class="tooltips"><a href="https://www.facebook.com/universidadtecnicadecotopaxi/" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/BELEN/ABRIL/face-1.jpg?ver=2019-05-22-154312-910" alt=""></a> <a href="https://twitter.com/utcCotopaxi" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/BELEN/ABRIL/titter.jpg?ver=2019-05-22-160657-937" style=""></a> <a href="https://www.youtube.com/channel/UCJ9bM-HIXmb1mUUBsDVR-ig" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/BELEN/ABRIL/youtuve.jpg?ver=2019-05-22-160816-157" style=""></a> &nbsp;<a href="https://www.instagram.com/utc_cotopaxi/" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/BELEN/ABRIL/instagram.jpg?ver=2019-05-22-161050-443" style=""></a>&nbsp;&nbsp;<a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&amp;passive=true&amp;rm=false&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;ss=1&amp;scc=1&amp;ltmpl=default&amp;ltmplcache=2&amp;emr=1&amp;osid=1&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/BELEN/NUEVAimagen/correo.jpg?ver=2019-09-13-102035-873" style=""></a>&nbsp;&nbsp;<a href="http://utcradiofm.com/#:~:text=UTC%20Radio%20FM%20%2D%20Tu%20radio%20Online%20en%20la%20102.9%20FM" target="_blank"><img src="https://www.utc.edu.ec/Portals/0/BELEN/2022%20IMAGENES/radio_Mesa%20de%20trabajo%201.jpg?ver=2022-06-08-082024-983" style=""></a>&nbsp;&nbsp;<a href="https://www.utc.edu.ec/LinkClick.aspx?link=2817&amp;tabid=2817&amp;portalid=0&amp;mid=658"><img src="https://www.utc.edu.ec/Portals/0/CEDIA-UTC/cu.png?ver=2023-03-10-100921-930" style="" width="37" height="37" alt="texto emergente"></a></div>
+</div>
+
+</div><!-- End_Module_658 --></div>
+</div>
+<div class="c_footer">
+        
+        
+        
+        
+</div>
+
+</div></div>
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div id="dnnmenu">
+				<div id="menubox">
+					
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.trindir.net/kategori/windows/pc-windows-oyunlari/" title="pc oyunları indir">pc oyunları indir</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://maltepeokul.com/ad-tag/escort-bostanci/" title="bostanci escort">bostanci escort</a>
+<a href="http://maltepeokul.com" title="pendik escort">pendik escort</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://istanbulartsnob.com/" title="escort istanbul">escort istanbul</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://www.niceescorts.com/ad-category/konyaalti-escort-bayan" title="konyaaltı escort">konyaaltı escort bayan</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.dermanhoca.com/baglama-buyusu/" target="_blank">Bağlama Büyüsü</a>
+</div>
+<div style="display: none;"> 
+<a href="https://catunited.com/british-shorthair-cat/" title="British Shorthair Cat">British Shorthair Cat</a> 
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.destehoca.com/hizmet/ask-muskasi" target="_blank">Aşk Muskası</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://maltepeokul.com/ad-tag/gebze-eskort-bayan/" title="gebze escort">gebze escort</a>
+<a href="http://maltepeokul.com/ad-tag/kurtkoy-merkez-escort/" title="kurtköy escort">kurtköy escort</a>
+<a href="http://maltepeokul.com/ad-tag/maltepe-escortlar/" title="maltepe escort">maltepe escort</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://bonustopla.com">deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://dirtcircle.com" rel="dofollow" target="_blank" title="deneme bonusu">deneme bonusu</a>
+<a href="https://bns.amqsports.com" rel="dofollow" target="_blank" title="deneme bonusu">deneme bonusu</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.orhanhocam.com/" target="_blank">https://www.orhanhocam.com/</a>
+<a href="https://www.baglamaduasi.net/" target="_blank">https://www.baglamaduasi.net/</a>
+<a href="https://www.yasinnhoca.com/baglama-duasi/" target="_blank">Bağlama Duası/</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.buyuleri.net/" target="_blank">Büyüleri</a>
+</div><div id="SuperFish">
+    <ul class="sf-menu">
+		<li class="item first current Breadcrumb"><a href="http://www.utc.edu.ec/"><span>Inicio</span></a></li>
+		<li class="item haschild"><a><span>UTC</span></a>
+			<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/UTC/La-Universidad" class=" haschild">La Universidad</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/UTC/La-Universidad/Historia" class="">Historia</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/La-Universidad/Misi&#243;n-y-Visi&#243;n" class="">Misi&#243;n y Visi&#243;n</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/La-Universidad/Himno" class="">Himno</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/autoridades" class="">Autoridades</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/organigrama" class="">Organigrama</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/Directorio" class="">Directorio</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/" class=" haschild">Campus</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/utc/salache" class="">Salache</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/utc/lamana" class=" haschild">Extensi&#243;n La Man&#225;</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/UTC/Campus/Extensi&#243;n-La-Man&#225;/noticiaslm" class="">noticiaslm</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/lm-turismo" class="">TURISMO - LA MANA</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/turismo" class="">TurismoLM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/Campus/Extensi&#243;n-La-Man&#225;/AgroindustrialLM" class="">AgroindustrialLM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/Campus/Extensi&#243;n-La-Man&#225;/ContabilidadLM" class="">ContabilidadLM</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/" class="">La Matriz</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/UTC/Campus/Extensi&#243;n-Pujil&#237;" class="">Extensi&#243;n Pujil&#237;</a></li>
+			    	</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="item haschild"><a><span>PREGRADO</span></a>
+			<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/" class=" haschild">CAREN</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/agroindustrial" class="">Agroindustrial</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/veterinaria" class="">Veterinaria</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/agronomia" class="">Agronom&#237;a</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/ambiente" class="">Ambiente</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CAREN/turismo" class="">Turismo</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CAREN/Agropecuarias" class="">Agropecuarias</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CAREN/Biotecnologia" class="">Biotecnologia</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/" class=" haschild">CIYA</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/sistemas_informaticos" class="">Sistemas de Informaci&#243;n</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/electromecanica_1" class="">Electromec&#225;nica</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/ciya/industrial" class="">Industrial</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CIYA/Electricidad" class="">Electricidad</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CIYA/Hidr&#225;ulica" class="">Hidr&#225;ulica</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/" class=" haschild">Administrativas</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/contabilidad_auditoria" class="">Contabilidad y Auditor&#237;a</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/gestion_informacion_gerencial" class="">Gesti&#243;n de la Informaci&#243;n Gerencial</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/administracion_de_empresas" class="">Administraci&#243;n de Empresas</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CCAA/Mercadot&#233;cnia1" class="">Mercadot&#233;cnia</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Administrativas/Gestion-del-Talento-Humano" class="">Gestion del Talento Humano</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Administrativas/Economia" class="">Economia</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/" class=" haschild">Humanas</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/disenio_grafico" class="">Dise&#241;o Gr&#225;fico</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/comunicacion_social" class="">Comunicaci&#243;n</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Humanas/Trabajo-Social" class="">Trabajo Social</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Humanas/Animaci&#243;n-Digital" class="">Animaci&#243;n Digital</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-Pujil&#237;" class=" haschild">Extensi&#243;n Pujil&#237;</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/edu_inicial" class="">Educaci&#243;n Inicial</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/edu_basica" class="">Educaci&#243;n B&#225;sica</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/pedagogia_idiomas" class="">Pedagog&#237;a del Idioma Ingl&#233;s</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/CCHH/Lengua-y-Literatura" class="">Pedagog&#237;a de la Lengua y Literatura</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-Pujil&#237;/Pedagog&#237;a-de-las-Matem&#225;ticas-y-la-F&#237;sica" class="">Pedagog&#237;a de las Matem&#225;ticas y la F&#237;sica</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;" class=" haschild">Extensi&#243;n La Man&#225;</a>
+			   		<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Contabilidad_LM" class="">Contabilidad_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Administraci&#243;n_LM" class="">Administraci&#243;n_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Electromec&#225;nica_LM" class="">Electromec&#225;nica_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Sistemas-de-Informaci&#243;n_LM" class="">Sistemas de Informaci&#243;n_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Turismo_LM" class="">Turismo_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Agronom&#237;a_LM" class="">Agronom&#237;a_LM</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/PREGRADO/Extensi&#243;n-La-Man&#225;/Agroindustrias_LM" class="">Agroindustrias_LM</a></li>
+			    	</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="item haschild"><a href="http://www.utc.edu.ec/POSGRADO/oferta1"><span>POSGRADO</span></a>
+			<ul>
+				<li class="item first"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_gestion_publoica_2022.pdf?ver=2022-09-14-083856-607" class="">Gesti&#243;n  P&#250;blica</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_gestion_ambiental_2022.pdf?ver=2022-09-14-083856-310" class="">Gesti&#243;n  Ambiental</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/BELEN/2022%20PDF/cambioADM.pdf?ver=2022-09-29-121642-190&amp;timestamp=1664471809223" class="">Administraci&#243;n de Empresas</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_desarrollo_local_2022.pdf?ver=2022-09-14-083853-847" class="">Desarrollo Local</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_edubasica_2022.pdf?ver=2022-09-14-083854-377" class="">Educaci&#243;n B&#225;sica</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_educacion_inicial_lm_2022.pdf?ver=2022-09-14-083854-987" class="">Educaci&#243;n Inicial</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_electricidad_2022.pdf?ver=2022-09-14-083855-280" class="">Electricidad</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_sanidad_vegetal_2022.pdf?ver=2022-09-14-083857-263" class="">Sanidad Vegetal</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_veterinarias_2022.pdf?ver=2022-09-14-083857-573" class="">Medicina Veterinaria</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_comunicacion_2022.pdf?ver=2022-09-14-083852-503" class="">Comunicaci&#243;n</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_agroindustria_2022.pdf?ver=2022-09-14-083852-147" class="">Agroindustrias</a></li>
+				<li class="item"><a href="https://www.utc.edu.ec/Portals/0/carlos%202016/carlos22/posgrados/maestria_derecho_constitucional_2022.pdf?ver=2022-09-14-083852-973" class="">Derecho Constitucional</a></li>
+			</ul>
+		</li>
+		<li class="item haschild"><a><span>INVESTIGACI&#211;N</span></a>
+			<ul>
+				<li class="item first"><a href="http://www.utc.edu.ec/INVESTIGACI&#211;N/Quienes-Somos" class="">Quienes Somos</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/INVESTIGACI&#211;N/Lineas-Investigaci&#243;n" class="">Lineas Investigaci&#243;n</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/INVESTIGACI&#211;N/Grupos-de-Investigaci&#243;n" class="">Grupos de Investigaci&#243;n</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/INVESTIGACI%C3%93N/Proyectos/inicio" class="">Convocatorias y Resultados</a></li>
+				<li class="item"><a href="http://www.utc.edu.ec/INVESTIGACI&#211;N/Publicaciones" class=" haschild">Publicaciones</a>
+			   		<ul>
+				<li class="item first"><a href="http://ecuciencia.utc.edu.ec/Home/buscar/" class="">Art&#237;culos Cient&#237;ficos</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/libros/index.php/libros" class="">Libros</a></li>
+				<li class="item"><a href="http://ecuciencia.utc.edu.ec/Home/buscar/" class="">Cap&#237;tulos de Libros</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="http://www.utc.edu.ec/INVESTIGACI&#211;N/Revistas" class=" haschild">Revistas</a>
+			   		<ul>
+				<li class="item first"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/utciencia" class="">UTCIENCIA</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/ciya" class="">CIENCIAS DE LA INGENIER&#205;A Y APLICADAS</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/rimarina" class="">CIENCIAS SOCIALES Y HUMANIDADES</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/RENPYS" class="">RENPYS</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/prospectivasutc" class="">CIENCIAS ADMINISTRATIVAS Y ECON&#211;MICAS</a></li>
+				<li class="item"><a href="http://investigacion.utc.edu.ec/revistasutc/index.php/invpos" class="">REVISTA INVPOS</a></li>
+			    	</ul>
+				</li>
+				<li class="item"><a href="https://drive.google.com/drive/folders/1gNVuxUggdH4CYzO8-lnzmtgOPBy2TKIq?usp=sharing" class="">Normativa</a></li>
+			</ul>
+		</li>
+		<li class="item last haschild"><a><span>APLICACIONES</span></a>
+			<ul>
+				<li class="item first"><a href="http://aplicaciones.utc.edu.ec/sith/th/asistencia" class="">ASISTENCIA EMPLEADOS</a></li>
+				<li class="item"><a href="http://aplicaciones.utc.edu.ec/sigutc/academic/ss/asistenciaDocenteV2" class="">ASISTENCIA DOCENTES</a></li>
+				<li class="item"><a href="http://aplicaciones.utc.edu.ec/sigutc/academic/public/LogIn.aspx" class="">Sistema Acad&#233;mico</a></li>
+				<li class="item"><a href="http://aplicaciones.utc.edu.ec/" class="">Talento Humano</a></li>
+				<li class="item"><a href="http://aplicaciones.utc.edu.ec/consultas/calificaciones.aspx" class="">Calificaciones sistema anterior</a></li>
+				<li class="item"><a href="http://aplicaciones.utc.edu.ec/sigutc/academic/private/calificaciones" class="">Ingreso de Calificaciones</a></li>
+				<li class="item"><a href="http://avirtuales.utc.edu.ec" class="">Aulas Virtuales</a></li>
+				<li class="item"><a href="http://172.16.40.8:81/Acceso/Login" class="">Planificaci&#243;n Estrat&#233;gica</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+				</div>
+				<div class="clr"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div id="dnn_BannerPane" class="FullPane BannerPane"><div class="DnnModule DnnModule-DnnskinNetMGS DnnModule-657"><a name="657"></a><div id="dnn_ctr657_ContentPane" class="DNNAlignleft"><!-- Start_Module_657 --><div id="dnn_ctr657_ModuleContent" class="DNNModuleContent ModDnnskinNetMGSC">
+	
+<div id="MGS657"><div class="mgsheight657 mgswidth657"><script src="/DesktopModules/Dnnskin.Net.MGS/Templates/Award/js/unoslider.js" type="text/javascript"></script>
+<ul id="mgs_unoslider" class="unoslider">
+<li class="item8634">
+	<a href="https://drive.google.com/drive/folders/1p35_FjkAUweKI02ByHh9JBDbxMF4no0l" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/INVESTIGACIÓN/WhatsApp Image 2023-05-09 at 16.41.28.jpeg" alt="" border="0" />
+</li>
+<li class="item8633">
+	<a href="https://www.utc.edu.ec/Portals/0/CARLOS 2023 ARTES/RENDICI&#211;N DECUENTAS/Rendicion_mayoCuentas_Mayo_Final.pdf?ver=2023-05-03-145439-923" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"><br></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/RENDICIÓN DECUENTAS/WhatsApp Image 2023-05-03 at 13.48.43.jpeg" alt="" border="0" />
+</li>
+<li class="item8632">
+	<a href="https://bit.ly/41FSxJD" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/banner de nivelación_Mesa de trabajo 1.jpg" alt="" border="0" />
+</li>
+<li class="item8627">
+	<a href="https://www.utc.edu.ec/Portals/0/CARLOS 2023 ARTES/PDF/calendario 2 2023...pdf?ver=2023-03-17-123136-620" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"><br></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/calendario-01.jpg" alt="" border="0" />
+</li>
+<li class="item8605">
+	
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/EDUCACIÓN CONTINUA/banner de investifación2_Mesa de trabajo 1.jpg" alt="" border="0" />
+</li>
+<li class="item8598">
+	<a href="https://www.utc.edu.ec/Portals/0/CARLOS 2023 ARTES/PDF/INFORMATIVO DEL SEGURO DE VIDA Y ACCIDENTES PERSONALES PARA LOS ESTUDIANTES DE LA UTC  2023.pdf?ver=2023-01-23-085905-980" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"><br></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/Seguro_Vida_Accidentes-01.jpg" alt="" border="0" />
+</li>
+<li class="item8600">
+	<a href="https://www.utc.edu.ec/Portals/0/CARLOS 2023 ARTES/PDF/5.-Sentencia.pdf?ver=2023-02-28-081710-120" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/CARLOS 2023 ARTES/sentencia.jpg" alt="" border="0" />
+</li>
+<li class="item8547">
+	
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/BELEN/2022 BANERS/horarios-02.jpg" alt="" border="0" />
+</li>
+<li class="item8537">
+	<a href="https://www.utc.edu.ec/Portals/0/BELEN/2022%20PDF/rendicionPAGINA2.pdf?ver=2022-03-17-145420-630" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/BELEN/2022 BANERS/bannerCUENTAS-01.jpg" alt="" border="0" />
+</li>
+<li class="item8477">
+	<a href="https://www.utc.edu.ec/Portals/0/BELEN/2021%20PDF/DISEN%CC%83O%20PEDI%20WED%20-%20JUNIO%20DE%202021.pdf?ver=2021-07-12-081355-773" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/BELEN/2021 BANERS/planESTRATEGICO-01.jpg" alt="" border="0" />
+</li>
+<li class="item8551">
+	<a href="https://www.utc.edu.ec/UTC/SERVICIOS/CITACIONES-JUDICIALES" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/BELEN/2022 BANERS/citaciones1-01.jpg" alt="" border="0" />
+</li>
+<li class="item8590">
+	<a href="https://docs.google.com/forms/d/1_ExDD7tUm-Q2ZBRVNtTmpJSle64tPZpd_RY0FqiIU8s/viewform?ts=6350005c&amp;edit_requested=true" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/carlos 2016/Carlos 2022/WhatsApp Image 2022-11-10 at 15.14.10.jpeg" alt="" border="0" />
+</li>
+<li class="item7057">
+	<a href="http://bolsaempleo.utc.edu.ec/home/index" target="_self" class="readmore"><span>Read More</span></a>
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/BELEN/ABRIL/bolsaEMPLEO.jpg" alt="Bolsa de Empleo" border="0" />
+</li>
+<li class="item7115">
+	
+	<div class="unoslider_layers"> 
+		<div class="fade ex6"><div class="mlr"></div></div> 
+	</div>
+	<img src="/Portals/0/Images/2018/banner ALTERNATIVAS_Mesa_Trabajo.jpg" alt="" border="0" />
+</li>
+</ul>
+<script type='text/javascript'>
+<!--
+		$(document).ready(function(){ 
+			var slider = $('#mgs_unoslider').unoslider({
+				width: 960,
+				height: 385,
+				indicator: true,
+				slideshow: {
+					speed:8
+			}
+		});});
+	--> 
+</script></div></div>
+
+</div><!-- End_Module_657 --></div>
+</div></div>
+	</div>
+	<div class="row">
+		<div id="dnncontent">
+			
+				<div class="panes">
+					<div id="dnn_FAColPane" class="fleft FAColPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5514"><a name="5514"></a><div id="dnn_ctr5514_ContentPane" class="DNNAlignleft"><!-- Start_Module_5514 --><div id="dnn_ctr5514_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5514_HtmlModule_lblContent" class="Normal">
+		<a href="https://www.utc.edu.ec/PLANEAMIENTO2/PREGRADO-prueba" target="_blank"><img width="99%" src="http://www.utc.edu.ec/Portals/0/BELEN/RE_PAGINA/pregrado.jpg?ver=2019-09-13-153450-483" style=""></a>
+	</div>
+
+</div><!-- End_Module_5514 --></div>
+</div></div>
+					<div id="dnn_FBColPane" class="fleft FBColPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5513"><a name="5513"></a><div id="dnn_ctr5513_ContentPane" class="DNNAlignleft"><!-- Start_Module_5513 --><div id="dnn_ctr5513_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5513_HtmlModule_lblContent" class="Normal">
+		<a href="http://www.utc.edu.ec/POSGRADO/oferta1"><img width="99%" src="http://www.utc.edu.ec/Portals/0/BELEN/RE_PAGINA/posgrado.jpg?ver=2019-09-13-153634-723" style=""></a><br>
+	</div>
+
+</div><!-- End_Module_5513 --></div>
+</div></div>
+					<div id="dnn_FCColPane" class="fleft FCColPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5515"><a name="5515"></a><div id="dnn_ctr5515_ContentPane" class="DNNAlignright"><!-- Start_Module_5515 --><div id="dnn_ctr5515_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5515_HtmlModule_lblContent" class="Normal">
+		<a href="http://www.utc.edu.ec/PREGRADO/NIVELACION"><img width="99%" src="http://www.utc.edu.ec/Portals/0/BELEN/RE_PAGINA/nivelacion.jpg?ver=2019-10-18-085822-527"></a>
+	</div>
+
+</div><!-- End_Module_5515 --></div>
+</div></div>
+					<div id="dnn_FDColPane" class="fright FDColPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5516"><a name="5516"></a><div id="dnn_ctr5516_ContentPane" class="DNNAlignright"><!-- Start_Module_5516 --><div id="dnn_ctr5516_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5516_HtmlModule_lblContent" class="Normal">
+		<a href="http://www.utc.edu.ec/idiomas" target="_blank"><img width="99%" src="http://www.utc.edu.ec/Portals/0/BELEN/RE_PAGINA/centro.jpg?ver=2019-09-13-153938-090"></a>
+	</div>
+
+</div><!-- End_Module_5516 --></div>
+</div></div>
+					<div class="clr"></div>
+				</div>
+				<div class="panes">
+					
+					
+					<div class="clr"></div>
+				</div>
+			
+				<div class="panes">
+					<div id="dnn_LeftFourPane" class="fleft LeftFourPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-652"><a name="652"></a>
+<div class="silverheadc radius4 shadow1">
+	<div class="chead radius3">
+		<div class="visi"><a onclick="if (__dnn_ContainerMaxMin_OnClick(this, &#39;dnn_ctr652_ModuleContent&#39;)) return false;" id="dnn_ctr652_dnnVISIBILITY_cmdVisibility" title="Minimizar" href="javascript:__doPostBack(&#39;dnn$ctr652$dnnVISIBILITY$cmdVisibility&#39;,&#39;&#39;)"><img id="dnn_ctr652_dnnVISIBILITY_imgVisibility" title="Minimizar" src="/Portals/0/Containers/Award/images/min2.png" alt="Minimizar" /></a></div>
+		<h2><span id="dnn_ctr652_dnnTitle_titleLabel" class="ctitle">Servicios</span>
+
+
+</h2>
+	</div>
+	<div class="c_middle">
+		<div id="dnn_ctr652_ContentPane" class="containerpane DNNAlignleft"><!-- Start_Module_652 --><div id="dnn_ctr652_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr652_HtmlModule_lblContent" class="Normal">
+	<ul class="list1 list_padbot">
+<li><a class="button" href="http://www.utc.edu.ec/UTC/SERVICIOS/EVALUACION">ASEGURAMIENTO DE LA CALIDAD</a></li>
+<li><a class="button" href="https://educacion.continua.app/">EDUCACIÓN CONTINUA</a></li>
+<li><a class="button" href="http://www.utc.edu.ec/UTC/emprendimiento2">CENTRO DE EMPRENDIMIENTO</a></li>
+<li><a class="button" href="https://www.utc.edu.ec/EVENTOS/COMUNICACION">COMUNICACIÓN</a></li>
+<li><a class="button" href="http://www.utc.edu.ec/UTC/SERVICIOS/TRANSPARENCIA">TRANSPARENCIA</a></li>
+<li><a class="button" href="http://www.utc.edu.ec/Admin/REGLAMENTOS-UTC">NORMATIVA LEGAL</a></li>
+<li><a class="button" href="https://www.utc.edu.ec/UTC/SERVICIOS/CITACIONES-JUDICIALES">CITACIONES JUDICIALES</a></li>
+    <li><a class="button" href="/UTC/SERVICIOS/INFORMATICA">DIRECCIÓN DE TI</a></li>
+    <li><a class="button" href="/bienestar">BIENESTAR UNIVERSITARIO</a></li>
+    <li><a class="button" href="/bibliotecav">BIBLIOTECA</a></li>
+    <li><a class="button" href="/vinculacion">VINCULACIÓN CON LA SOCIEDAD</a></li>
+    <li><a class="button" href="https://drive.google.com/drive/folders/1dA-bjRYL_-7CNCU6a4FQHkBv5hzlCVKi?usp=sharing" target="_blank">FORMATOS INSTITUCIONALES</a></li>
+    <li><a class="button" href="http://181.112.224.122" target="_blank">GACETA UTC</a></li></ul>
+</div>
+
+</div><!-- End_Module_652 --></div>
+		<div class="clr"></div>
+	</div>
+	<div class="c_footer">
+        
+        
+        
+        
+	</div>
+</div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-653"><a name="653"></a>
+<div class="silverheadc radius4 shadow1">
+	<div class="chead radius3">
+		<div class="visi"><a onclick="if (__dnn_ContainerMaxMin_OnClick(this, &#39;dnn_ctr653_ModuleContent&#39;)) return false;" id="dnn_ctr653_dnnVISIBILITY_cmdVisibility" title="Minimizar" href="javascript:__doPostBack(&#39;dnn$ctr653$dnnVISIBILITY$cmdVisibility&#39;,&#39;&#39;)"><img id="dnn_ctr653_dnnVISIBILITY_imgVisibility" title="Minimizar" src="/Portals/0/Containers/Award/images/min2.png" alt="Minimizar" /></a></div>
+		<h2><span id="dnn_ctr653_dnnTitle_titleLabel" class="ctitle">Que hay de nuevo?</span>
+
+
+</h2>
+	</div>
+	<div class="c_middle">
+		<div id="dnn_ctr653_ContentPane" class="containerpane DNNAlignleft"><!-- Start_Module_653 --><div id="dnn_ctr653_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr653_HtmlModule_lblContent" class="Normal">
+	<a class="twitter-timeline" data-lang="es" data-height="500" data-theme="dark" href="https://twitter.com/utcCotopaxi?ref_src=twsrc%5Etfw">Tweets by utcCotopaxi</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+</div><!-- End_Module_653 --></div>
+		<div class="clr"></div>
+	</div>
+	<div class="c_footer">
+        
+        
+        
+        
+	</div>
+</div></div></div>
+					<div id="dnn_RightEightPane" class="fright RightEightPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-655"><a name="655"></a><div id="dnn_ctr655_ContentPane" class="DNNAlignleft"><!-- Start_Module_655 --><div id="dnn_ctr655_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr655_HtmlModule_lblContent" class="Normal">
+	<iframe width="99%" height="337,5" src="https://www.youtube.com/embed/ux6dhTXe3mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+</div><!-- End_Module_655 --></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-656"><a name="656"></a><div id="dnn_ctr656_ContentPane" class="DNNAlignleft"><!-- Start_Module_656 --><div id="dnn_ctr656_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr656_HtmlModule_lblContent" class="Normal">
+	<iframe src="https://feed.mikle.com/widget/v2/65973/" height="740px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+</div>
+
+</div><!-- End_Module_656 --></div>
+</div></div>
+					<div class="clr"></div>
+				</div>
+				<div class="panes">
+					
+					
+					
+					<div class="clr"></div>
+				</div>
+				<div class="panes">
+					
+					
+					<div class="clr"></div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div id="dnnfooter">
+		<div class="row">
+				<div class="panes">
+					<div id="dnn_FootAPane" class="fleft FootAPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-649"><a name="649"></a>
+<div class="c_H1">
+    <h1 class="cheader"><span id="dnn_ctr649_dnnTITLE_titleLabel" class="title">Acerca de nosotros</span>
+
+
+</h1>
+<div id="dnn_ctr649_ContentPane" class="DNNAlignleft"><!-- Start_Module_649 --><div id="dnn_ctr649_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr649_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: justify;"><font size="2">El mundo Académico es cambiante, evoluciona cada día. Es mucho más competitivo y exigente. En la Universidad Técnica de Cotopaxi nos distinguimos por la calidad de nuestros servicios, el profesionalismo de nuestra gente y la manera en que formamos estudiantes con conocimientos superlativos y competitivos.
+Hoy, consolidamos un compromiso en la forma de trabajar y de comportarnos; Creamos el valor que tú necesitas
+.</font></p><p style="text-align: justify;"><a class="link2" href="#" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">more</a></p>
+</div>
+
+</div><!-- End_Module_649 --></div>
+</div>
+<div class="c_footer">
+        
+        
+        
+        
+</div>
+
+</div></div>
+					<div id="dnn_FootBPane" class="fleft FootBPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-651"><a name="651"></a>
+<div class="c_H1">
+    <h1 class="cheader"><span id="dnn_ctr651_dnnTITLE_titleLabel" class="title">Contactanos</span>
+
+
+</h1>
+<div id="dnn_ctr651_ContentPane" class="DNNAlignleft"><!-- Start_Module_651 --><div id="dnn_ctr651_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr651_HtmlModule_lblContent" class="Normal">
+	Av. Simón Rodríguez s/n Barrio El Ejido Sector San Felipe.<br>
+Latacunga - Ecuador.<br>
+Teléfonos: (593) 03 2252205 / 2252307 / 2252346. CAREN: 2266164.&nbsp;<div>LA MANÁ: 2688443.<br>
+Av. Los Almendros y calle Pujili sector La Virgen&nbsp;</div><div>La Maná - &nbsp;Ecuador</div><div><a href="http://www.utc.edu.ec">www.utc.edu.ec</a><p style="text-align: left;">comunicacion.institucional@utc.edu.ec&nbsp;<a class="link2" href="/contact">más</a></p></div>
+</div>
+
+</div><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://fullfilmizle.net/" title="film izle">film izle</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.volvoadventure.org/" title="yatırım şartsız deneme bonusu veren siteler">yatırım şartsız deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.apornvideo.com/video/573/high-definition-xxx-video-of-vira-doing-anal/" title="High definition xxx video of Vira doing anal">High definition xxx video of Vira doing anal</a>
+<a href="https://www.hdhindisex.com/video/3654/odia-bhabhi-ko-pati-ke-boss-ne-choda-xxx-sex-video/" title="Odia bhabhi ko pati ke boss ne choda xxx sex video">Odia bhabhi ko pati ke boss ne choda xxx sex video</a>
+<a href="https://www.pussyboy.net/video/5933/big-tits-babe-sex-webcam/" title="Big Tits Babe Sex Webcam">Big Tits Babe Sex Webcam</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://ctwpaa.org/" title="bonus veren siteler">bonus veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.sozburada.com" rel="dofollow" target="_blank" title="deneme bonusu veren siteler">deneme bonusu veren siteler</a> 
+<a href="https://www.lotokazan.com" rel="dofollow" target="_blank" title="deneme bonusu veren siteler">deneme bonusu</a> 
+<a href="https://denemebonusu.io" rel="dofollow" target="_blank" title="deneme bonusu veren siteler">deneme bonusu</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.sozmuzik.org/" rel="dofollow" target="_blank" title="deneme bonusu">deneme bonusu</a>
+<a href="https://www.takipci.org/" rel="dofollow" target="_blank" title="takipçi satın al">takipçi satın al</a>
+<a href="https://aliagaspor.com/" rel="dofollow" target="_blank" title="canlı casino">canlı casino</a>
+<a href="https://eburke.org/" rel="dofollow" target="_blank" title="deneme bonusu veren siteler">deneme bonusu veren siteler</a>
+<a href="https://www.petanaokulu.com/casino-siteleri/" rel="dofollow" target="_blank" title="casino siteleri">casino siteleri</a>
+<a href="https://www.petanaokulu.com/bahis-siteleri/" rel="dofollow" target="_blank" title="bahis siteleri">bahis siteleri</a>
+<a href="https://www.petanaokulu.com/slot-siteleri/" rel="dofollow" target="_blank" title="slot siteleri">slot siteleri</a>
+</div><!-- End_Module_651 --></div>
+</div>
+<div class="c_footer">
+        
+        
+        
+        
+</div>
+
+</div></div>
+					<div id="dnn_FootCPane" class="fright FootCPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-650"><a name="650"></a>
+<div class="c_H1">
+    <h1 class="cheader"><span id="dnn_ctr650_dnnTITLE_titleLabel" class="title">Enlaces Externos</span>
+
+
+</h1>
+<div id="dnn_ctr650_ContentPane" class="DNNAlignleft"><!-- Start_Module_650 --><div id="dnn_ctr650_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr650_HtmlModule_lblContent" class="Normal">
+	<table><tbody><tr>
+
+<td><a href="http://www.educacionsuperior.gob.ec/" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/carlos%202016/carlos%202018/FEBRERO/logo-senasity-final.png?ver=2018-02-08-102749-713" style="vertical-align: middle;"></a></td>
+
+<td><a href="http://www.ceaaces.gob.ec/sitio/" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/carlos%202016/carlos%202018/FEBRERO/ceases.png?ver=2018-02-08-150524-560" style="vertical-align: middle;"></a></td>
+
+<td><a href="http://www.educacionsuperior.gob.ec/sistema-nacional-de-nivelacion-y-admision-snna/" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/carlos%202016/carlos%202018/FEBRERO/logo-snna.png?ver=2018-02-08-150524-763" style=""></a></td></tr><tr>
+
+<td><img src="http://www.utc.edu.ec/Portals/0/carlos%202016/carlos%202018/FEBRERO/logo-sri.png?ver=2018-02-08-150524-823"><br></td>
+
+<td></td>
+
+<td><a href="http://www.planificacion.gob.ec" target="_blank"><img src="http://www.utc.edu.ec/Portals/0/carlos%202016/carlos%202018/FEBRERO/logo-planificacio%CC%81n.png?ver=2018-02-08-150524-683" style="vertical-align: middle;"></a></td>
+
+</tr></tbody></table>
+</div>
+
+</div><!-- End_Module_650 --></div>
+</div>
+<div class="c_footer">
+        
+        
+        
+        
+</div>
+
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-7359"><a name="7359"></a>
+<div class="c_H1">
+    <h1 class="cheader"><span id="dnn_ctr7359_dnnTITLE_titleLabel" class="title">VISITAS</span>
+
+
+</h1>
+<div id="dnn_ctr7359_ContentPane" class="DNNAlignleft"><!-- Start_Module_7359 --><div id="dnn_ctr7359_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr7359_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: left;"><center><a href="http://www.utc.edu.ec" title="Contador De Visitas UTC">
+<img style="border: 0px solid; display: inline; float: left;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=213716"></a><br><br></center></p>
+</div>
+
+</div><!-- End_Module_7359 --></div>
+</div>
+<div class="c_footer">
+        
+        
+        
+        
+</div>
+
+</div></div>
+					<div class="clr"></div>
+				</div>
+		</div>
+		<div id="dnncopyright">
+			<div class="row">
+			<a href="#top" id="top-link"></a>
+			<div class="linksbox">
+					<span id="dnn_dnnLINKS_lblLinks"><a class="links" href="http://www.utc.edu.ec/">Home</a><span class="links">|</span><a class="links" href="http://www.utc.edu.ec/POSGRADO/oferta1">POSGRADO</a></span>
+
+			</div>
+				<span id="dnn_dnnCopyright_lblCopyright" class="fleft SkinObject">Copyright 2023 Dirección de Servicios Informáticos</span>
+
+				<a id="dnn_dnnTerms_hypTerms" class="fright SkinObject" rel="nofollow" href="http://www.utc.edu.ec/Terms">Términos de uso</a> 
+				<a id="dnn_dnnPrivacy_hypPrivacy" class="fright SkinObject mr10" rel="nofollow" href="http://www.utc.edu.ec/Privacy">Política de privacidad</a>
+			</div>
+		</div>
+	</div>	
+</div>
+<!--CDF(Javascript|/Portals/0/Skins/Award//DNNStandard/StandardMenu.js?cdv=234)-->
+<!--CDF(Css|/Portals/0/Skins/Award//DNNStandard/StandardMenu.css?cdv=234)-->
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`218`,`containerid_dnn_ctr652_ModuleContent`:`652`,`cookieid_dnn_ctr652_ModuleContent`:`_Module652_Visible`,`min_icon_652`:`/Portals/0/Containers/Award/images/min2.png`,`max_icon_652`:`/Portals/0/Containers/Award/images/max2.png`,`max_text`:`Maximizar`,`min_text`:`Minimizar`,`containerid_dnn_ctr653_ModuleContent`:`653`,`cookieid_dnn_ctr653_ModuleContent`:`_Module653_Visible`,`min_icon_653`:`/Portals/0/Containers/Award/images/min2.png`,`max_icon_653`:`/Portals/0/Containers/Award/images/max2.png`}" />
+        <input name="__RequestVerificationToken" type="hidden" value="b6tniTv3beqqf2xfkpvnAFjI8XPo3gIWa5PhOmCAWnIO1w7BaUEz0NoGDu6aNxb_3Y_5igFY9v1P8fn5R5LIAmkgbvKokKKFjJNWXs6J86uh4Qugv6ObaUpFxAc1" />
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
+    
+    
+</body>
+</html>
